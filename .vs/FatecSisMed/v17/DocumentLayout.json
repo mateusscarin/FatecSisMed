@@ -1,0 +1,150 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\controllers\\especialidadecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\controllers\\especialidadecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\controllers\\conveniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\controllers\\conveniocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\services\\interfaces\\iconvenioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\services\\interfaces\\iconvenioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\services\\interfaces\\imedicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\services\\interfaces\\imedicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\services\\entities\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\services\\entities\\medicoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\services\\entities\\especialidadeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\services\\entities\\especialidadeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\services\\entities\\convenioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\services\\entities\\convenioservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.web\\services\\interfaces\\iespecialidadeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F7380543-6A96-47C3-AD19-1479327A5A3D}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\services\\interfaces\\iespecialidadeservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "EspecialidadeController.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Controllers\\EspecialidadeController.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Controllers\\EspecialidadeController.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Controllers\\EspecialidadeController.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Controllers\\EspecialidadeController.cs",
+              "ViewState": "AQIAABoAAAAAAAAAAAAwwAgAAAA5AAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-18T00:48:51.101Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "ConvenioController.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Controllers\\ConvenioController.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Controllers\\ConvenioController.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Controllers\\ConvenioController.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Controllers\\ConvenioController.cs",
+              "ViewState": "AQIAADoAAAAAAAAAAAAmwFQAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-10T23:21:40.567Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MedicoService.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Entities\\MedicoService.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Services\\Entities\\MedicoService.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Entities\\MedicoService.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Services\\Entities\\MedicoService.cs",
+              "ViewState": "AQIAABMAAAAAAAAAAAAgwBEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T23:08:19.396Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "EspecialidadeService.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Entities\\EspecialidadeService.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Services\\Entities\\EspecialidadeService.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Entities\\EspecialidadeService.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Services\\Entities\\EspecialidadeService.cs",
+              "ViewState": "AQIAADgAAAAAAAAAAAAIwEUAAAAsAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-08T22:43:27.439Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ConvenioService.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Entities\\ConvenioService.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Services\\Entities\\ConvenioService.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Entities\\ConvenioService.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Services\\Entities\\ConvenioService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-04T00:16:03.823Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "IMedicoService.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Interfaces\\IMedicoService.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Services\\Interfaces\\IMedicoService.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Interfaces\\IMedicoService.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Services\\Interfaces\\IMedicoService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAqwAsAAAABAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T23:05:52.421Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "IEspecialidadeService.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Interfaces\\IEspecialidadeService.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Services\\Interfaces\\IEspecialidadeService.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Interfaces\\IEspecialidadeService.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Services\\Interfaces\\IEspecialidadeService.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAA7wAwAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T23:01:58.941Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IConvenioService.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Interfaces\\IConvenioService.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.Web\\Services\\Interfaces\\IConvenioService.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\Services\\Interfaces\\IConvenioService.cs",
+              "RelativeToolTip": "FatecSisMed.Web\\Services\\Interfaces\\IConvenioService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAQAAAAhAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-04-01T22:55:49.451Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
