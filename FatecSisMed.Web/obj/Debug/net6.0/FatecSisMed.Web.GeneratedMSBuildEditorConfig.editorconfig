@@ -18,6 +18,38 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Convenio/CreateConvenio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmVuaW9cQ3JlYXRlQ29udmVuaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Convenio/DeleteConvenio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmVuaW9cRGVsZXRlQ29udmVuaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Convenio/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmVuaW9cSW5kZXguY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Convenio/UpdateConvenio.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ29udmVuaW9cVXBkYXRlQ29udmVuaW8uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Especialidade/CreateEspecialidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZVxDcmVhdGVFc3BlY2lhbGlkYWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Especialidade/DeleteEspecialidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZVxEZWxldGVFc3BlY2lhbGlkYWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Especialidade/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Especialidade/UpdateEspecialidade.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRXNwZWNpYWxpZGFkZVxVcGRhdGVFc3BlY2lhbGlkYWRlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/FATEC/5º Semestre/topicos-espec-2/FatecSisMed/FatecSisMed/FatecSisMed.Web/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 

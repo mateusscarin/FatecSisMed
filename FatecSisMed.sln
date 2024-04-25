@@ -9,7 +9,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "WEB", "WEB", "{0A55AD0F-4BD
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecSisMed.MedicoAPI", "FatecSisMed.MedicoAPI\FatecSisMed.MedicoAPI.csproj", "{B4ABAC51-362A-44AC-870A-7DBD999DE7AF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecSisMed.Web", "FatecSisMed.Web\FatecSisMed.Web.csproj", "{F7380543-6A96-47C3-AD19-1479327A5A3D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecSisMed.Web", "FatecSisMed.Web\FatecSisMed.Web.csproj", "{F7380543-6A96-47C3-AD19-1479327A5A3D}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
