@@ -1,12 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace FatecSisMed.Web.Views.Convenio
+namespace FatecSisMed.Web.Views.Especialidade;
+
+public class CreateEspecialidadeModel : PageModel
 {
-    public class CreateConvenioModel : PageModel
+    public void OnGet()
     {
-        public void OnGet()
-        {
-        }
     }
 }

@@ -28,3 +28,4 @@ D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.Web\ob
 D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.Web\obj\Debug\net6.0\FatecSisMed.Web.pdb
 D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.Web\obj\Debug\net6.0\FatecSisMed.Web.genruntimeconfig.cache
 D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.Web\obj\Debug\net6.0\ref\FatecSisMed.Web.dll
+D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.Web\obj\Debug\net6.0\FatecSisMed.Web.sourcelink.json

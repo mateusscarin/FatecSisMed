@@ -1,6 +1,6 @@
-﻿@model IEnumerable<FatecSisMed.Web.Models.EspecialidadeViewModel>
+﻿@model IEnumerable<FatecSisMed.Web.Models.MedicoViewModel>
 
-<h2>Especialidades</h2>
+<h2>Medicos</h2>
 <hr />
 
 <div class="container">
@@ -8,8 +8,8 @@
         <div class="col-md-12">
             <div>
                 <div class="pull-left">
-                    <a asp-action="CreateEspecialidade" class="btn btn-primary">
-                        <span title="Create New" class="fas fa-plus"></span> Cadastrar Especialidade
+                    <a asp-action="CreateMedico" class="btn btn-primary">
+                        <span title="Create New" class="fas fa-plus"></span> Cadastrar Medico
                     </a>
                 </div>
             </div>
@@ -40,10 +40,10 @@
                             @Html.DisplayFor(modelItem => item.Nome)
                         </td>
                         <td align="center">
-                            <a asp-action="UpdateEspecialidade" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">
+                            <a asp-action="UpdateMedico" asp-route-id="@item.Id" title="Edit" class="btn btn-warning">
                                 <span class="fas fa-edit"></span>
                             </a>
-                            <a asp-action="DeleteEspecialidade" asp-route-id="@item.Id" title="Delete" class="btn btn-danger">
+                            <a asp-action="DeleteMedico" asp-route-id="@item.Id" title="Delete" class="btn btn-danger">
                                 <span class="fas fa-trash-alt"></span>
                             </a>
                         </td>

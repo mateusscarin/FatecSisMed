@@ -56,3 +56,4 @@ D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.Medico
 D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.MedicoAPI\bin\Debug\net6.0\System.Text.Encodings.Web.dll
 D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.MedicoAPI\bin\Debug\net6.0\System.Text.Json.dll
 D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.MedicoAPI\bin\Debug\net6.0\runtimes\browser\lib\net6.0\System.Text.Encodings.Web.dll
+D:\FATEC\5º Semestre\topicos-espec-2\FatecSisMed\FatecSisMed\FatecSisMed.MedicoAPI\obj\Debug\net6.0\FatecSisMed.MedicoAPI.sourcelink.json

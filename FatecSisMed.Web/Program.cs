@@ -1,7 +1,20 @@
+using FatecSisMed.Web.Services.Entities;
+using FatecSisMed.Web.Services.Interfaces;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddHttpClient("MedicoAPI", p =>
+{
+    p.BaseAddress = new Uri(builder.Configuration["ServiceUri:MedicoAPI"]);
+}
+);
+
+builder.Services.AddScoped<IEspecialidadeService, EspecialidadeService>();
+builder.Services.AddScoped<IConvenioService, ConvenioService>();
+builder.Services.AddScoped<IMedicoService, MedicoService>();
 
 var app = builder.Build();
 

@@ -1,12 +1,10 @@
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace FatecSisMed.Web.Views.Convenio
+namespace FatecSisMed.Web.Views.Convenio;
+
+public class DeleteConvenioModel : PageModel
 {
-    public class CreateConvenioModel : PageModel
+    public void OnGet()
     {
-        public void OnGet()
-        {
-        }
     }
 }

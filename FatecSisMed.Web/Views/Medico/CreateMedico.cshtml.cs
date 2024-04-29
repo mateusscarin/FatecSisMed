@@ -1,8 +1,8 @@
 using Microsoft.AspNetCore.Mvc.RazorPages;
 
-namespace FatecSisMed.Web.Views.Convenio;
+namespace FatecSisMed.Web.Views.Medico;
 
-public class IndexModel : PageModel
+public class CreateMedicoModel : PageModel
 {
     public void OnGet()
     {
