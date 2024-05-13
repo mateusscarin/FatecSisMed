@@ -1,93 +1,121 @@
-﻿using FatecSisMed.Web.Models;
-using FatecSisMed.Web.Services.Interfaces;
-using System.Text;
+﻿using System.Text;
 using System.Text.Json;
+using FatecSisMed.Web.Models;
+using FatecSisMed.Web.Services.Interfaces;
 
-namespace FatecSisMed.Web.Services.Entities;
-
-public class ConvenioService : IConvenioService
+namespace FatecSisMed.Web.Services.Entities
 {
-    private readonly IHttpClientFactory _clientFactory;
-    private readonly JsonSerializerOptions _options;
-
-    public ConvenioService(IHttpClientFactory clientFactory)
+    public class ConvenioService : IConvenioService
     {
-        _clientFactory = clientFactory;
-        _options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-    }
 
-    private const string apiEndpoint = "/api/convenio/";
+        private readonly IHttpClientFactory _clientFactory;
+        private readonly JsonSerializerOptions _options;
 
-    public async Task<ConvenioViewModel> CreateConvenio(ConvenioViewModel convenio)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        StringContent content = new StringContent(JsonSerializer.Serialize(convenio), Encoding.UTF8, "application/json");
-
-        using (var response = await client.PostAsync(apiEndpoint, content))
+        public ConvenioService(IHttpClientFactory clientFactory)
         {
+            _clientFactory = clientFactory;
+            _options = new JsonSerializerOptions
+            { PropertyNameCaseInsensitive = true };
+        }
+
+        private const string apiEndpoint = "/api/convenio/";
+        private ConvenioViewModel _convenioViewModel;
+        private IEnumerable<ConvenioViewModel> convenios;
+
+        public async Task<IEnumerable<ConvenioViewModel>> GetAllConvenios()
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+
+            var response = await client.GetAsync(apiEndpoint);
+
             if (response.IsSuccessStatusCode)
             {
                 var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<ConvenioViewModel>(apiResponse, _options);
+                convenios = await JsonSerializer
+                    .DeserializeAsync<IEnumerable
+                    <ConvenioViewModel>>(apiResponse, _options);
             }
-            return null;
+            else
+                return null;
+
+            return convenios;
         }
-    }
 
-    public async Task<bool> DeleteConvenioById(int id)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        using (var response = await client.DeleteAsync(apiEndpoint + id))
+        public async Task<ConvenioViewModel> FindConvenioById(int id)
         {
-            return response.IsSuccessStatusCode;
-        }
-    }
+            var client = _clientFactory.CreateClient("MedicoAPI");
 
-    public async Task<ConvenioViewModel> FindConvenioById(int id)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-        using (var response = await client.GetAsync(apiEndpoint + id))
-        {
-            if (response.IsSuccessStatusCode && response.Content is not null)
+            using(var response = await client.GetAsync(apiEndpoint + id))
             {
-                var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<ConvenioViewModel>(apiResponse, _options);
+                if (response.IsSuccessStatusCode && response.Content is not null)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    _convenioViewModel = await JsonSerializer
+                        .DeserializeAsync<ConvenioViewModel>
+                        (apiResponse, _options);
+                }
+                else
+                    return null;
             }
-            return null;
+            return _convenioViewModel;
         }
-    }
 
-    public async Task<IEnumerable<ConvenioViewModel>> GetAllConvenios()
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        var response = await client.GetAsync(apiEndpoint);
-
-        if (response.IsSuccessStatusCode)
+        public async Task<ConvenioViewModel> CreateConvenio
+            (ConvenioViewModel convenioViewModel)
         {
-            var apiResponse = await response.Content.ReadAsStreamAsync();
-            return await JsonSerializer.DeserializeAsync<IEnumerable<ConvenioViewModel>>(apiResponse, _options);
-        }
-        return null;
-    }
+            var client = _clientFactory.CreateClient("MedicoAPI");
 
-    public async Task<ConvenioViewModel> UpdateConvenio(ConvenioViewModel convenioViewModel)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
+            StringContent content =
+                new StringContent(JsonSerializer.Serialize(convenioViewModel),
+                Encoding.UTF8, "application/json");
 
-        ConvenioViewModel convenio = new ConvenioViewModel();
-
-        using (var response = await client.PutAsJsonAsync(apiEndpoint, convenioViewModel))
-        {
-            if (response.IsSuccessStatusCode)
+            using(var response = await client.PostAsync(apiEndpoint, content))
             {
-                var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<ConvenioViewModel>(apiResponse, _options);
+                if (response.IsSuccessStatusCode)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    _convenioViewModel = await JsonSerializer
+                        .DeserializeAsync<ConvenioViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
             }
-            return null;
+            return _convenioViewModel;
         }
 
+        public async Task<ConvenioViewModel> UpdateConvenio(ConvenioViewModel convenioViewModel)
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+
+            ConvenioViewModel convenio = new ConvenioViewModel();
+
+            using (var response = await client.PutAsJsonAsync(apiEndpoint, convenioViewModel))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    convenio = await JsonSerializer
+                        .DeserializeAsync<ConvenioViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
+            }
+            return convenio;
+        }
+
+        public async Task<bool> DeleteConvenioById(int id)
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+
+            using (var response = await client.DeleteAsync(apiEndpoint + id))
+            {
+                if (response.IsSuccessStatusCode) return true;
+            }
+            return false;
+        }
+
+
+        // 
     }
 }
+

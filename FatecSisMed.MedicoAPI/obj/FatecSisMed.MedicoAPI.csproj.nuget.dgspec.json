@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj": {}
+    "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj": {}
   },
   "projects": {
-    "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj": {
+    "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj",
+        "projectUniqueName": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
         "projectName": "FatecSisMed.MedicoAPI",
-        "projectPath": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj",
+        "projectPath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
         "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-        "outputPath": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\obj\\",
+        "outputPath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -47,7 +47,7 @@
           "dependencies": {
             "AutoMapper.Extensions.Microsoft.DependencyInjection": {
               "target": "Package",
-              "version": "[12.0.1, )"
+              "version": "[12.0.0, )"
             },
             "Microsoft.AspNetCore.Authentication.JwtBearer": {
               "target": "Package",
@@ -64,14 +64,6 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[6.0.0, )"
-            },
-            "Npgsql": {
-              "target": "Package",
-              "version": "[8.0.2, )"
-            },
-            "Npgsql.EntityFrameworkCore.PostgreSQL": {
-              "target": "Package",
-              "version": "[6.0.22, )"
             },
             "Pomelo.EntityFrameworkCore.MySql": {
               "target": "Package",

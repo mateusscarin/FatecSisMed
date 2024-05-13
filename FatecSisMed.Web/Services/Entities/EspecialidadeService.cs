@@ -1,93 +1,120 @@
-﻿using FatecSisMed.Web.Models;
-using FatecSisMed.Web.Services.Interfaces;
+﻿using System;
 using System.Text;
 using System.Text.Json;
+using FatecSisMed.Web.Models;
+using FatecSisMed.Web.Services.Interfaces;
 
-namespace FatecSisMed.Web.Services.Entities;
-
-public class EspecialidadeService : IEspecialidadeService
+namespace FatecSisMed.Web.Services.Entities
 {
-    private readonly IHttpClientFactory _clientFactory;
-    private readonly JsonSerializerOptions _options;
-
-    public EspecialidadeService(IHttpClientFactory clientFactory)
+    public class EspecialidadeService : IEspecialidadeService
     {
-        _clientFactory = clientFactory;
-        _options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-    }
 
-    private const string apiEndpoint = "/api/especialidade/";
+        private readonly IHttpClientFactory _clientFactory;
 
-    public async Task<EspecialidadeViewModel> CreateEspecialidade(EspecialidadeViewModel especialidade)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        StringContent content = new StringContent(JsonSerializer.Serialize(especialidade), Encoding.UTF8, "application/json");
-
-        using (var response = await client.PostAsync(apiEndpoint, content))
+        public EspecialidadeService(IHttpClientFactory clientFactory)
         {
+            _clientFactory = clientFactory;
+            _options = new JsonSerializerOptions
+            { PropertyNameCaseInsensitive = true };
+        }
+
+        private readonly JsonSerializerOptions _options;
+        private const string apiEndpoint = "/api/especialidade/";
+        private EspecialidadeViewModel _especialidadeViewModel;
+        private IEnumerable<EspecialidadeViewModel> especialidades;
+
+        public async Task<IEnumerable<EspecialidadeViewModel>> GetAllEspecialidades()
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+
+            var response = await client.GetAsync(apiEndpoint);
+
             if (response.IsSuccessStatusCode)
             {
                 var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<EspecialidadeViewModel>(apiResponse, _options);
+                especialidades = await JsonSerializer
+                    .DeserializeAsync<IEnumerable
+                    <EspecialidadeViewModel>>(apiResponse, _options);
             }
-            return null;
+            else
+                return Enumerable.Empty<EspecialidadeViewModel>();
+
+            return especialidades;
         }
-    }
 
-    public async Task<bool> DeleteEspecialidadeById(int id)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        using (var response = await client.DeleteAsync(apiEndpoint + id))
+        public async Task<EspecialidadeViewModel> FindEspecialidadeById(int id)
         {
-            return response.IsSuccessStatusCode;
-        }
-    }
+            var client = _clientFactory.CreateClient("MedicoAPI");
 
-    public async Task<EspecialidadeViewModel> FindEspecialidadeById(int id)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-        using (var response = await client.GetAsync(apiEndpoint + id))
-        {
-            if (response.IsSuccessStatusCode && response.Content is not null)
+            using (var response = await client.GetAsync(apiEndpoint + id))
             {
-                var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<EspecialidadeViewModel>(apiResponse, _options);
+                if (response.IsSuccessStatusCode && response.Content is not null)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    _especialidadeViewModel = await JsonSerializer
+                        .DeserializeAsync<EspecialidadeViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
             }
-            return null;
+            return _especialidadeViewModel;
         }
-    }
 
-    public async Task<IEnumerable<EspecialidadeViewModel>> GetAllEspecialidades()
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        var response = await client.GetAsync(apiEndpoint);
-
-        if (response.IsSuccessStatusCode)
+        public async Task<EspecialidadeViewModel>
+            CreateEspecialidade(EspecialidadeViewModel especialidadeViewModel)
         {
-            var apiResponse = await response.Content.ReadAsStreamAsync();
-            return await JsonSerializer.DeserializeAsync<IEnumerable<EspecialidadeViewModel>>(apiResponse, _options);
-        }
-        return null;
-    }
+            var client = _clientFactory.CreateClient("MedicoAPI");
 
-    public async Task<EspecialidadeViewModel> UpdateEspecialidade(EspecialidadeViewModel especialidadeViewModel)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
+            StringContent content =
+                new StringContent(JsonSerializer.Serialize(especialidadeViewModel),
+                Encoding.UTF8, "application/json");
 
-        EspecialidadeViewModel especialidade = new EspecialidadeViewModel();
-
-        using (var response = await client.PutAsJsonAsync(apiEndpoint, especialidadeViewModel))
-        {
-            if (response.IsSuccessStatusCode)
+            using (var response = await client.PostAsync(apiEndpoint, content))
             {
-                var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<EspecialidadeViewModel>(apiResponse, _options);
+                if (response.IsSuccessStatusCode)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    _especialidadeViewModel = await JsonSerializer
+                        .DeserializeAsync<EspecialidadeViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
             }
-            return null;
+            return _especialidadeViewModel;
         }
 
+        public async Task<EspecialidadeViewModel>
+            UpdateEspecialidade(EspecialidadeViewModel especialidadeViewModel)
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+
+            EspecialidadeViewModel especialidade = new EspecialidadeViewModel();
+
+            using (var response = await
+                client.PutAsJsonAsync(apiEndpoint, especialidadeViewModel))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    especialidade = await JsonSerializer
+                        .DeserializeAsync<EspecialidadeViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
+            }
+            return especialidade;
+        }
+
+        public async Task<bool> DeleteEspecialidadeById(int id)
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+
+            using (var response = await client.DeleteAsync(apiEndpoint + id))
+            {
+                if (response.IsSuccessStatusCode) return true;
+            }
+            return false;
+        }
     }
 }
+

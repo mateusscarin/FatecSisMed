@@ -1,4 +1,4 @@
-using FatecSisMed.MedicoAPI.Context.Entities;
+﻿using FatecSisMed.MedicoAPI.Context.Entities;
 using FatecSisMed.MedicoAPI.Repositories.Entities;
 using FatecSisMed.MedicoAPI.Repositories.Interfaces;
 using FatecSisMed.MedicoAPI.Services.Entities;
@@ -14,26 +14,34 @@ builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-//pegando a string de conexao 
-var connectionDB = builder.Configuration.GetConnectionString("DefaultConnection");
+// pegando a string de conexao
+var mySqlConnection = builder
+    .Configuration.GetConnectionString("DefaultConnection");
 
-//usar para que o Entity framework 
+// usar para que o Entity Framework
 // crie nossas tabelas no banco de dados
 builder.Services.AddDbContext<AppDbContext>(options =>
-    options.UseMySql(connectionDB, ServerVersion.AutoDetect(connectionDB))
+    options.UseMySql(mySqlConnection,
+    ServerVersion.AutoDetect(mySqlConnection))
 );
 
-builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+builder.Services.AddAutoMapper(
+    AppDomain.CurrentDomain.GetAssemblies());
 
-//adicionando a inje  o de dependencia
-builder.Services.AddScoped<IConvenioRepository, ConvenioRepository>();
-builder.Services.AddScoped<IEspecialidadeRepository, EspecialidadeRepository>();
-builder.Services.AddScoped<IMedicoRepository, MedicoRepository>();
+// adicionando a injeção de dependencia
+builder.Services.AddScoped<
+    IConvenioRepository, ConvenioRepository>();
+builder.Services.AddScoped<
+    IEspecialidadeRepository, EspecialidadeRepository>();
+builder.Services.AddScoped<
+    IMedicoRepository, MedicoRepository>();
 
-builder.Services.AddScoped<IConvenioService, ConvenioService>();
-builder.Services.AddScoped<IEspecialidadeService, EspecialidadeService>();
-builder.Services.AddScoped<IMedicoService, MedicoService>();
-
+builder.Services.AddScoped<
+    IConvenioService, ConvenioService>();
+builder.Services.AddScoped<
+    IEspecialidadeService, EspecialidadeService>();
+builder.Services.AddScoped<
+    IMedicoService, MedicoService>();
 
 var app = builder.Build();
 
@@ -51,3 +59,4 @@ app.UseAuthorization();
 app.MapControllers();
 
 app.Run();
+

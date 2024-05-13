@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj": {}
+    "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj": {}
   },
   "projects": {
-    "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj": {
+    "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj",
+        "projectUniqueName": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj",
         "projectName": "FatecSisMed.Web",
-        "projectPath": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj",
+        "projectPath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\FatecSisMed.Web.csproj",
         "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-        "outputPath": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\obj\\",
+        "outputPath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config",

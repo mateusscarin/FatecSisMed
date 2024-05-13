@@ -7,25 +7,12 @@ namespace FatecSisMed.MedicoAPI.Repositories.Entities;
 
 public class MedicoRepository : IMedicoRepository
 {
+
     private readonly AppDbContext _dbContext;
+
     public MedicoRepository(AppDbContext dbContext)
     {
         _dbContext = dbContext;
-    }
-
-    public async Task<Medico> Create(Medico medico)
-    {
-        _dbContext.Medicos.Add(medico);
-        await _dbContext.SaveChangesAsync();
-        return medico;
-    }
-
-    public async Task<Medico> Delete(int id)
-    {
-        var medico = await GetById(id);
-        _dbContext.Medicos.Remove(medico);
-        await _dbContext.SaveChangesAsync();
-        return medico;
     }
 
     public async Task<IEnumerable<Medico>> GetAll()
@@ -35,7 +22,14 @@ public class MedicoRepository : IMedicoRepository
 
     public async Task<Medico> GetById(int id)
     {
-        return await _dbContext.Medicos.FirstOrDefaultAsync(m => m.Id == id);
+        return await _dbContext.Medicos.FirstOrDefaultAsync(c => c.Id == id);
+    }
+
+    public async Task<Medico> Create(Medico medico)
+    {
+        _dbContext.Medicos.Add(medico);
+        await _dbContext.SaveChangesAsync();
+        return medico;
     }
 
     public async Task<Medico> Update(Medico medico)
@@ -44,4 +38,14 @@ public class MedicoRepository : IMedicoRepository
         await _dbContext.SaveChangesAsync();
         return medico;
     }
+
+    public async Task<Medico> Delete(int id)
+    {
+        var medico = await GetById(id);
+        _dbContext.Remove(medico);
+        await _dbContext.SaveChangesAsync();
+        return medico;
+    }
+
 }
+

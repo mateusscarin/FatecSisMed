@@ -6,11 +6,12 @@ namespace FatecSisMed.MedicoAPI.DTO.Mappings;
 
 public class MappingProfile : Profile
 {
-    public MappingProfile()
-    {
-        CreateMap<Convenio, ConvenioDTO>().ReverseMap();
+	public MappingProfile()
+	{
+		CreateMap<Convenio, ConvenioDTO>().ReverseMap();
         CreateMap<Especialidade, EspecialidadeDTO>().ReverseMap();
         CreateMap<Medico, MedicoDTO>().ReverseMap();
-
     }
+
 }
+

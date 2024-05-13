@@ -10,5 +10,5 @@ public interface IConvenioService
     Task Create(ConvenioDTO convenioDTO);
     Task Update(ConvenioDTO convenioDTO);
     Task Remove(int id);
-
 }
+

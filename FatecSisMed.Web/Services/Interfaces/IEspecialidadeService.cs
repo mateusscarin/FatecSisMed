@@ -1,12 +1,18 @@
-﻿using FatecSisMed.Web.Models;
+﻿using System;
+using FatecSisMed.Web.Models;
 
-namespace FatecSisMed.Web.Services.Interfaces;
-
-public interface IEspecialidadeService
+namespace FatecSisMed.Web.Services.Interfaces
 {
-    Task<IEnumerable<EspecialidadeViewModel>> GetAllEspecialidades();
-    Task<EspecialidadeViewModel> FindEspecialidadeById(int id);
-    Task<EspecialidadeViewModel> CreateEspecialidade(EspecialidadeViewModel especialidade);
-    Task<EspecialidadeViewModel> UpdateEspecialidade(EspecialidadeViewModel especialidade);
-    Task<bool> DeleteEspecialidadeById(int id);
+	public interface IEspecialidadeService
+	{
+        Task<IEnumerable<EspecialidadeViewModel>> GetAllEspecialidades();
+        Task<EspecialidadeViewModel>
+            FindEspecialidadeById(int id);
+        Task<EspecialidadeViewModel>
+            CreateEspecialidade(EspecialidadeViewModel especialidadeViewModel);
+        Task<EspecialidadeViewModel>
+            UpdateEspecialidade(EspecialidadeViewModel especialidadeViewModel);
+        Task<bool> DeleteEspecialidadeById(int id);
+    }
 }
+

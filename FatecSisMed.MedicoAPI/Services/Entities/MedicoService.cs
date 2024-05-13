@@ -7,8 +7,8 @@ using FatecSisMed.MedicoAPI.Services.Interfaces;
 namespace FatecSisMed.MedicoAPI.Services.Entities;
 
 public class MedicoService : IMedicoService
-
 {
+
     private readonly IMedicoRepository _medicoRepository;
     private readonly IMapper _mapper;
 
@@ -16,13 +16,6 @@ public class MedicoService : IMedicoService
     {
         _medicoRepository = medicoRepository;
         _mapper = mapper;
-    }
-
-    public async Task Create(MedicoDTO medicoDTO)
-    {
-        var medico = _mapper.Map<Medico>(medicoDTO);
-        await _medicoRepository.Create(medico);
-        medicoDTO.Id = medicoDTO.Id;
     }
 
     public async Task<IEnumerable<MedicoDTO>> GetAll()
@@ -37,14 +30,22 @@ public class MedicoService : IMedicoService
         return _mapper.Map<MedicoDTO>(medico);
     }
 
-    public async Task Remove(int id)
+    public async Task Create(MedicoDTO medicoDTO)
     {
-        await _medicoRepository.Delete(id);
+        var medico = _mapper.Map<Medico>(medicoDTO);
+        await _medicoRepository.Create(medico);
+        medicoDTO.Id = medico.Id;
     }
-
+    
     public async Task Update(MedicoDTO medicoDTO)
     {
         var medico = _mapper.Map<Medico>(medicoDTO);
         await _medicoRepository.Update(medico);
     }
+
+    public async Task Remove(int id)
+    {
+        await _medicoRepository.Delete(id);
+    }
 }
+

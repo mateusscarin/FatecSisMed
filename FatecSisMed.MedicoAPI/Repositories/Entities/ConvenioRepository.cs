@@ -7,25 +7,15 @@ namespace FatecSisMed.MedicoAPI.Repositories.Entities;
 
 public class ConvenioRepository : IConvenioRepository
 {
+
+    // o que os repositories fazem?
+    // fazem com que os métodos tenham acesso ao BD
+
     private readonly AppDbContext _dbContext;
+
     public ConvenioRepository(AppDbContext dbContext)
     {
         _dbContext = dbContext;
-    }
-
-    public async Task<Convenio> Create(Convenio convenio)
-    {
-        _dbContext.Convenios.Add(convenio);
-        await _dbContext.SaveChangesAsync();
-        return convenio;
-    }
-
-    public async Task<Convenio> Delete(int id)
-    {
-        var convenio = await GetById(id);
-        _dbContext.Convenios.Remove(convenio);
-        await _dbContext.SaveChangesAsync();
-        return convenio;
     }
 
     public async Task<IEnumerable<Convenio>> GetAll()
@@ -40,7 +30,16 @@ public class ConvenioRepository : IConvenioRepository
 
     public async Task<IEnumerable<Convenio>> GetConvenioMedicos()
     {
-        return await _dbContext.Convenios.Include(c=>c.Medicos).ToListAsync();
+        return await _dbContext.Convenios.Include(
+            c => c.Medicos).ToListAsync();
+    }
+
+    public async Task<Convenio> Create(Convenio convenio)
+    {
+        _dbContext.Convenios.Add(convenio);
+        await _dbContext.SaveChangesAsync();
+        return convenio;
+
     }
 
     public async Task<Convenio> Update(Convenio convenio)
@@ -50,4 +49,13 @@ public class ConvenioRepository : IConvenioRepository
         return convenio;
     }
 
+    public async Task<Convenio> Delete(int id)
+    {
+        var convenio = await GetById(id);
+        _dbContext.Convenios.Remove(convenio);
+        await _dbContext.SaveChangesAsync();
+        return convenio;
+    }
+
 }
+

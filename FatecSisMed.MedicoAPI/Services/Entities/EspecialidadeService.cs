@@ -7,22 +7,16 @@ using FatecSisMed.MedicoAPI.Services.Interfaces;
 namespace FatecSisMed.MedicoAPI.Services.Entities;
 
 public class EspecialidadeService : IEspecialidadeService
-
 {
+
     private readonly IEspecialidadeRepository _especialidadeRepository;
     private readonly IMapper _mapper;
 
-    public EspecialidadeService(IEspecialidadeRepository especialidadeRepository, IMapper mapper)
+    public EspecialidadeService(IEspecialidadeRepository especialidadeRepository,
+        IMapper mapper)
     {
         _especialidadeRepository = especialidadeRepository;
         _mapper = mapper;
-    }
-
-    public async Task Create(EspecialidadeDTO especialidadeDTO)
-    {
-        var especialidade = _mapper.Map<Especialidade>(especialidadeDTO);
-        await _especialidadeRepository.Create(especialidade);
-        especialidadeDTO.Id = especialidadeDTO.Id;
     }
 
     public async Task<IEnumerable<EspecialidadeDTO>> GetAll()
@@ -30,7 +24,7 @@ public class EspecialidadeService : IEspecialidadeService
         var especialidades = await _especialidadeRepository.GetAll();
         return _mapper.Map<IEnumerable<EspecialidadeDTO>>(especialidades);
     }
-
+    
     public async Task<EspecialidadeDTO> GetById(int id)
     {
         var especialidade = await _especialidadeRepository.GetById(id);
@@ -43,9 +37,11 @@ public class EspecialidadeService : IEspecialidadeService
         return _mapper.Map<IEnumerable<EspecialidadeDTO>>(especialidades);
     }
 
-    public async Task Remove(int id)
+    public async Task Create(EspecialidadeDTO especialidadeDTO)
     {
-        await _especialidadeRepository.Delete(id);
+        var especialidade = _mapper.Map<Especialidade>(especialidadeDTO);
+        await _especialidadeRepository.Create(especialidade);
+        especialidadeDTO.Id = especialidade.Id;
     }
 
     public async Task Update(EspecialidadeDTO especialidadeDTO)
@@ -53,4 +49,10 @@ public class EspecialidadeService : IEspecialidadeService
         var especialidade = _mapper.Map<Especialidade>(especialidadeDTO);
         await _especialidadeRepository.Update(especialidade);
     }
+
+    public async Task Remove(int id)
+    {
+        await _especialidadeRepository.Delete(id);
+    }
 }
+

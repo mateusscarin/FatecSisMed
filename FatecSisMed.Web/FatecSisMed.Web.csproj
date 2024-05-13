@@ -6,4 +6,20 @@
     <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
+  <ItemGroup>
+    <None Remove="Services\" />
+    <None Remove="Services\Interfaces\" />
+    <None Remove="Services\Entities\" />
+    <None Remove="Views\Especialidade\" />
+    <None Remove="Views\Convenio\" />
+    <None Remove="Views\Medico\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Services\" />
+    <Folder Include="Services\Interfaces\" />
+    <Folder Include="Services\Entities\" />
+    <Folder Include="Views\Especialidade\" />
+    <Folder Include="Views\Convenio\" />
+    <Folder Include="Views\Medico\" />
+  </ItemGroup>
 </Project>

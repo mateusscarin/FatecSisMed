@@ -1,4 +1,4 @@
-using FatecSisMed.Web.Services.Entities;
+﻿using FatecSisMed.Web.Services.Entities;
 using FatecSisMed.Web.Services.Interfaces;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -15,6 +15,7 @@ builder.Services.AddHttpClient("MedicoAPI", p =>
 builder.Services.AddScoped<IEspecialidadeService, EspecialidadeService>();
 builder.Services.AddScoped<IConvenioService, ConvenioService>();
 builder.Services.AddScoped<IMedicoService, MedicoService>();
+
 
 var app = builder.Build();
 
@@ -38,3 +39,4 @@ app.MapControllerRoute(
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+

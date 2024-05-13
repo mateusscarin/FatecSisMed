@@ -9,6 +9,9 @@
             <dt class="col-sm-2">
                 @Html.DisplayNameFor(model => model.Nome)
             </dt>
+            <dt class="col-sm-2">
+                @Html.DisplayFor(model => model.Nome)
+            </dt>
 
             <form asp-action="DeleteEspecialidade">
                 <input type="hidden" asp-for="Id" />

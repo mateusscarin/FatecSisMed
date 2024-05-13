@@ -11,3 +11,4 @@ public interface IEspecialidadeService
     Task Update(EspecialidadeDTO especialidadeDTO);
     Task Remove(int id);
 }
+

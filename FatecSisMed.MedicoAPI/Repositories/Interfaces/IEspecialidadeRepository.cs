@@ -10,4 +10,6 @@ public interface IEspecialidadeRepository
     Task<Especialidade> Create(Especialidade especialidade);
     Task<Especialidade> Update(Especialidade especialidade);
     Task<Especialidade> Delete(int id);
+    
 }
+

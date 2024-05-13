@@ -3,8 +3,8 @@ using System.Text.Json.Serialization;
 
 namespace FatecSisMed.MedicoAPI.DTO.Entities;
 
-public class MedicoDTO
-{
+	public class MedicoDTO
+	{
     public int Id { get; set; }
 
     [Required(ErrorMessage = "O nome é obrigatório!")]
@@ -12,7 +12,7 @@ public class MedicoDTO
     [MaxLength(100)]
     public string? Nome { get; set; }
 
-    [Required(ErrorMessage ="O CRM é obrigatório!")]
+    [Required(ErrorMessage = "O CRM é obrigatório!")]
     public int CRM { get; set; }
     public string? Email { get; set; }
 
@@ -22,10 +22,11 @@ public class MedicoDTO
 
     [JsonIgnore]
     public EspecialidadeDTO? EspecialidadeDTO { get; set; }
-    public int EspecialidadeIdDTO { get; set; }
+    public int EspecialidadeId { get; set; }
 
     [JsonIgnore]
-    public ConvenioDTO? ConvenioDTO { get; set;}
-    public int ConvenioIdDTO { get; set; }
+    public ConvenioDTO? ConvenioDTO { get; set; }
+    public int ConvenioId { get; set; }
 
 }
+

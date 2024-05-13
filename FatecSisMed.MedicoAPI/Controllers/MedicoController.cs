@@ -2,63 +2,63 @@
 using FatecSisMed.MedicoAPI.Services.Interfaces;
 using Microsoft.AspNetCore.Mvc;
 
-namespace FatecSisMed.MedicoAPI.Controllers;
+// For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 
-[Route("api/[controller]")]
-[ApiController]
-public class MedicoController : Controller
+namespace FatecSisMed.MedicoAPI.Controllers
 {
-    private readonly IMedicoService _medicoService;
-
-    public MedicoController(IMedicoService medicoService)
+    [Route("api/[controller]")]
+    [ApiController]
+    public class MedicoController : Controller
     {
-        _medicoService = medicoService;
-    }
+        private readonly IMedicoService _medicoService;
 
-    [HttpGet]
-    public async Task<ActionResult<IEnumerable<MedicoDTO>>> Get()
-    {
-        var medicosDTO = await _medicoService.GetAll();
-        if (medicosDTO is null)
-            return NotFound("Nenhum convênio foi encontrado!");
-        return Ok(medicosDTO);
-    }
+        public MedicoController(IMedicoService medicoService)
+        {
+            _medicoService = medicoService;
+        }
 
-    [HttpGet("{id:int}", Name = "GetMedico")]
-    public async Task<ActionResult<MedicoDTO>> Get(int id)
-    {
-        var medicoDTO = await _medicoService.GetById(id);
-        if (medicoDTO is null)
-            return NotFound("Médico não encontrado!");
-        return Ok(medicoDTO);
-    }
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<MedicoDTO>>> Get()
+        {
+            var medicosDTO = await _medicoService.GetAll();
+            if (medicosDTO is null)
+                return NotFound("Não foi encontrado nenhum médico!");
+            return Ok(medicosDTO);
+        }
 
-    [HttpPost]
-    public async Task<ActionResult> Post([FromBody] MedicoDTO medicoDTO)
-    {
-        if (medicoDTO is null)
-            return BadRequest("Dados inválidos!");
-        await _medicoService.Create(medicoDTO);
-        return new CreatedAtRouteResult("GetMedico", new { id = medicoDTO.Id }, medicoDTO);
-    }
+        [HttpGet("{id:int}", Name = "GetMedico")]
+        public async Task<ActionResult<MedicoDTO>> Get(int id)
+        {
+            var medicoDTO = await _medicoService.GetById(id);
+            if (medicoDTO == null) return NotFound("Médico não encontrado!");
+            return Ok(medicoDTO);
+        }
 
-    [HttpPut]
-    public async Task<ActionResult> Put([FromBody] MedicoDTO medicoDTO)
-    {
-        if (medicoDTO is null)
-            return BadRequest("Dados inválidos!");
-        await _medicoService.Update(medicoDTO);
-        return Ok(medicoDTO);
-    }
+        [HttpPost]
+        public async Task<ActionResult> Post([FromBody] MedicoDTO medicoDTO)
+        {
+            if (medicoDTO is null) return BadRequest("Dados inválidos!");
+            await _medicoService.Create(medicoDTO);
+            return new CreatedAtRouteResult("GetMedico",
+                new { id = medicoDTO.Id }, medicoDTO);
+        }
 
-    [HttpDelete("{id}")]
-    public async Task<ActionResult<MedicoDTO>> Delete(int id)
-    {
-        var medicoDTO = await _medicoService.GetById(id);
-        if (medicoDTO is null)
-            return NotFound("Médico não encontrado!");
-        await _medicoService.Remove(id);
-        return Ok(medicoDTO);
-    }
+        [HttpPut()]
+        public async Task<ActionResult> Put([FromBody] MedicoDTO medicoDTO)
+        {
+            if (medicoDTO is null) return BadRequest("Dados inválidos!");
+            await _medicoService.Update(medicoDTO);
+            return Ok(medicoDTO);
+        }
 
+        [HttpDelete("{id}")]
+        public async Task<ActionResult<MedicoDTO>> Delete(int id)
+        {
+            var medicoDTO = await _medicoService.GetById(id);
+            await _medicoService.Remove(id);
+            return Ok(medicoDTO);
+        }
+
+    }
 }
+

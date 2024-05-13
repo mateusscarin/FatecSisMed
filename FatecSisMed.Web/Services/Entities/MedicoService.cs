@@ -1,93 +1,118 @@
-﻿using FatecSisMed.Web.Models;
-using FatecSisMed.Web.Services.Interfaces;
+﻿using System;
 using System.Text;
 using System.Text.Json;
+using FatecSisMed.Web.Models;
+using FatecSisMed.Web.Services.Interfaces;
 
-namespace FatecSisMed.Web.Services.Entities;
-
-public class MedicoService : IMedicoService
+namespace FatecSisMed.Web.Services.Entities
 {
-    private readonly IHttpClientFactory _clientFactory;
-    private readonly JsonSerializerOptions _options;
-
-    public MedicoService(IHttpClientFactory clientFactory)
+    public class MedicoService : IMedicoService
     {
-        _clientFactory = clientFactory;
-        _options = new JsonSerializerOptions() { PropertyNameCaseInsensitive = true };
-    }
 
-    private const string apiEndpoint = "/api/medico/";
+        private readonly IHttpClientFactory _clientFactory;
+        private readonly JsonSerializerOptions _options;
+        private const string apiEndpoint = "/api/medico/";
+        private MedicoViewModel _medicoViewModel;
+        private IEnumerable<MedicoViewModel> medicos;
 
-    public async Task<MedicoViewModel> CreateMedico(MedicoViewModel medico)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        StringContent content = new StringContent(JsonSerializer.Serialize(medico), Encoding.UTF8, "application/json");
-
-        using (var response = await client.PostAsync(apiEndpoint, content))
+        public MedicoService(IHttpClientFactory clientFactory)
         {
+            _clientFactory = clientFactory;
+            _options = new JsonSerializerOptions
+            { PropertyNameCaseInsensitive = true };
+        }
+
+        public async Task<IEnumerable<MedicoViewModel>> GetAllMedicos()
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+            
+            var response = await client.GetAsync(apiEndpoint);
+
             if (response.IsSuccessStatusCode)
             {
                 var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<MedicoViewModel>(apiResponse, _options);
+                medicos = await JsonSerializer
+                    .DeserializeAsync<IEnumerable<MedicoViewModel>>(apiResponse, _options);
+
             }
-            return null;
+            else
+                return null;
+
+            return medicos;
         }
-    }
 
-    public async Task<bool> DeleteMedicoById(int id)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        using (var response = await client.DeleteAsync(apiEndpoint + id))
+        public async Task<MedicoViewModel> FindMedicoById(int id)
         {
-            return response.IsSuccessStatusCode;
-        }
-    }
-
-    public async Task<MedicoViewModel> FindMedicoById(int id)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-        using (var response = await client.GetAsync(apiEndpoint + id))
-        {
-            if (response.IsSuccessStatusCode && response.Content is not null)
+            var client = _clientFactory.CreateClient("MedicoAPI");
+            
+            using (var response = await client.GetAsync(apiEndpoint + id))
             {
-                var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<MedicoViewModel>(apiResponse, _options);
+                if (response.IsSuccessStatusCode && response.Content != null)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    _medicoViewModel = await JsonSerializer
+                        .DeserializeAsync<MedicoViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
             }
-            return null;
+            return _medicoViewModel;
         }
-    }
 
-    public async Task<IEnumerable<MedicoViewModel>> GetAllMedicos()
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        var response = await client.GetAsync(apiEndpoint);
-
-        if (response.IsSuccessStatusCode)
+        public async Task<MedicoViewModel> CreateMedico(MedicoViewModel medicoViewModel)
         {
-            var apiResponse = await response.Content.ReadAsStreamAsync();
-            return await JsonSerializer.DeserializeAsync<IEnumerable<MedicoViewModel>>(apiResponse, _options);
-        }
-        return null;
-    }
+            var client = _clientFactory.CreateClient("MedicoAPI");
+            
+            StringContent content = new StringContent(
+                JsonSerializer.Serialize(medicoViewModel),
+                    Encoding.UTF8, "application/json");
 
-    public async Task<MedicoViewModel> UpdateMedico(MedicoViewModel medicoViewModel)
-    {
-        var client = _clientFactory.CreateClient("MedicoAPI");
-
-        MedicoViewModel medico = new MedicoViewModel();
-
-        using (var response = await client.PutAsJsonAsync(apiEndpoint, medicoViewModel))
-        {
-            if (response.IsSuccessStatusCode)
+            using (var response = await client.PostAsync(apiEndpoint, content))
             {
-                var apiResponse = await response.Content.ReadAsStreamAsync();
-                return await JsonSerializer.DeserializeAsync<MedicoViewModel>(apiResponse, _options);
+                if (response.IsSuccessStatusCode)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    _medicoViewModel = await JsonSerializer
+                        .DeserializeAsync<MedicoViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
             }
-            return null;
+            return _medicoViewModel;
+        }
+
+        public async Task<MedicoViewModel> UpdateMedico(MedicoViewModel medicoViewModel)
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+
+            MedicoViewModel medico = new MedicoViewModel();
+
+            using (var response = await client.PutAsJsonAsync(
+                apiEndpoint, medicoViewModel))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    var apiResponse = await response.Content.ReadAsStreamAsync();
+                    medico = await JsonSerializer
+                        .DeserializeAsync<MedicoViewModel>(apiResponse, _options);
+                }
+                else
+                    return null;
+            }
+
+            return medico;
+        }
+
+        public async Task<bool> DeleteMedicoById(int id)
+        {
+            var client = _clientFactory.CreateClient("MedicoAPI");
+            using (var response = await client.DeleteAsync(apiEndpoint + id))
+            {
+                if (response.IsSuccessStatusCode) return true;
+            }
+            return false;
         }
 
     }
 }
+
