@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FatecSisMed.IdentityServer")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9be0b4ff067f7dca45d1882525ea81ae4d45a86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+75dfce7c13d28d7d35ea9613db5ac8c8c7af2d76")]
 [assembly: System.Reflection.AssemblyProductAttribute("FatecSisMed.IdentityServer")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FatecSisMed.IdentityServer")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
