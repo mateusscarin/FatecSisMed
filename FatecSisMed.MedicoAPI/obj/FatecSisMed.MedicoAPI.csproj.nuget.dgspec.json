@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj": {}
+    "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj": {
+    "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
+        "projectUniqueName": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj",
         "projectName": "FatecSisMed.MedicoAPI",
-        "projectPath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
+        "projectPath": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj",
         "packagesPath": "C:\\Users\\Mateus\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\obj\\",
+        "outputPath": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Mateus\\AppData\\Roaming\\NuGet\\NuGet.Config",

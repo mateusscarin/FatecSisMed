@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "Z/Q3CMUi5bCTr+s1/GiG7+aUOn7Jg+Vtwayw9bnTGsJUB6dOfeGbsIkE/GvyiLaOY8ZfC5g9OHVQ8HXgiF3kbQ==",
+  "dgSpecHash": "8KBCL8xMm9Hp171czVlAnrMCxiVMoUIDE8mzi7SLnJcuFcARNXnTVqd4ur54tthITmdNL/lvRgpNsif1owSNAA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
+  "projectFilePath": "D:\\FATEC\\5º Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Mateus\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Mateus\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

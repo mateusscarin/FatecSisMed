@@ -3,11 +3,12 @@
     "Name": "Novo Perfil",
     "Projects": [
       {
-        "Name": "FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
-        "Action": "Start"
+        "Name": "FatecSisMed.Web\\FatecSisMed.Web.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
       },
       {
-        "Name": "FatecSisMed.Web\\FatecSisMed.Web.csproj",
+        "Name": "FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj",
         "Action": "Start"
       }
     ]

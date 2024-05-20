@@ -1,15 +1,17 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 25.0.1706.1
+# Visual Studio Version 17
+VisualStudioVersion = 17.9.34607.119
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Web", "Web", "{1CEC35FD-3A04-4E1E-BB34-8928BAE82453}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "API", "API", "{838B9F0C-93C5-400E-9BC8-1AB1B8A50BAF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecSisMed.MedicoAPI", "FatecSisMed.ProductAPI\FatecSisMed.MedicoAPI.csproj", "{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecSisMed.Web", "FatecSisMed.Web\FatecSisMed.Web.csproj", "{64A5FC44-427B-4B61-BE7F-39F48826EA8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecSisMed.Web", "FatecSisMed.Web\FatecSisMed.Web.csproj", "{64A5FC44-427B-4B61-BE7F-39F48826EA8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FatecSisMed.MedicoAPI", "FatecSisMed.MedicoAPI\FatecSisMed.MedicoAPI.csproj", "{79387634-306B-4B8C-9CE5-EEBB9A8C40CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FatecSisMed.IdentityServer", "FatecSisMed.IdentityServer\FatecSisMed.IdentityServer.csproj", "{624866E1-D6CE-4870-8D53-165EDFBF07D4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,23 +19,28 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}.Release|Any CPU.Build.0 = Release|Any CPU
 		{64A5FC44-427B-4B61-BE7F-39F48826EA8C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{64A5FC44-427B-4B61-BE7F-39F48826EA8C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{64A5FC44-427B-4B61-BE7F-39F48826EA8C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{64A5FC44-427B-4B61-BE7F-39F48826EA8C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{79387634-306B-4B8C-9CE5-EEBB9A8C40CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{79387634-306B-4B8C-9CE5-EEBB9A8C40CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{79387634-306B-4B8C-9CE5-EEBB9A8C40CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{79387634-306B-4B8C-9CE5-EEBB9A8C40CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{624866E1-D6CE-4870-8D53-165EDFBF07D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{624866E1-D6CE-4870-8D53-165EDFBF07D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{624866E1-D6CE-4870-8D53-165EDFBF07D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{624866E1-D6CE-4870-8D53-165EDFBF07D4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{64A5FC44-427B-4B61-BE7F-39F48826EA8C} = {1CEC35FD-3A04-4E1E-BB34-8928BAE82453}
+		{79387634-306B-4B8C-9CE5-EEBB9A8C40CB} = {838B9F0C-93C5-400E-9BC8-1AB1B8A50BAF}
+		{624866E1-D6CE-4870-8D53-165EDFBF07D4} = {838B9F0C-93C5-400E-9BC8-1AB1B8A50BAF}
+	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E9B89447-3AF6-403D-8FC8-871A5E722B04}
-	EndGlobalSection
-	GlobalSection(NestedProjects) = preSolution
-		{3147E299-3AAE-4A1E-9D95-AC6D91F098E9} = {838B9F0C-93C5-400E-9BC8-1AB1B8A50BAF}
-		{64A5FC44-427B-4B61-BE7F-39F48826EA8C} = {1CEC35FD-3A04-4E1E-BB34-8928BAE82453}
 	EndGlobalSection
 EndGlobal

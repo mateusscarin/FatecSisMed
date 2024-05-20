@@ -1,22 +1,22 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\",
+  "WorkspaceRootPath": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}|FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj|c:\\users\\mateus\\desktop\\fatecsismed\\fatecsismed\\fatecsismed.productapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}|FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj|solutionrelative:fatecsismed.productapi\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.identityserver\\configuration\\identityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|solutionrelative:fatecsismed.identityserver\\configuration\\identityconfiguration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}|FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj|c:\\users\\mateus\\desktop\\fatecsismed\\fatecsismed\\fatecsismed.productapi\\fatecsismed.medicoapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|",
-      "RelativeMoniker": "D:0:0:{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}|FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj|solutionrelative:fatecsismed.productapi\\fatecsismed.medicoapi.csproj||{04B8AB82-A572-4FEF-95CE-5222444B6B64}|"
+      "AbsoluteMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.identityserver\\fatecsismed.identityserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|solutionrelative:fatecsismed.identityserver\\fatecsismed.identityserver.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{64A5FC44-427B-4B61-BE7F-39F48826EA8C}|FatecSisMed.Web\\FatecSisMed.Web.csproj|c:\\users\\mateus\\desktop\\fatecsismed\\fatecsismed\\fatecsismed.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{64A5FC44-427B-4B61-BE7F-39F48826EA8C}|FatecSisMed.Web\\FatecSisMed.Web.csproj|solutionrelative:fatecsismed.web\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+      "AbsoluteMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.identityserver\\seeddatabase\\interfaces\\idatabaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|solutionrelative:fatecsismed.identityserver\\seeddatabase\\interfaces\\idatabaseinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}|FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj|c:\\users\\mateus\\desktop\\fatecsismed\\fatecsismed\\fatecsismed.productapi\\migrations\\20240513224631_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{3147E299-3AAE-4A1E-9D95-AC6D91F098E9}|FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj|solutionrelative:fatecsismed.productapi\\migrations\\20240513224631_initial-migration.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|d:\\fatec\\5\u00BA semestre\\topicos-espec-2\\fatecsismed\\fatecsismed\\fatecsismed.identityserver\\seeddatabase\\entities\\databaseidentityserverinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{624866E1-D6CE-4870-8D53-165EDFBF07D4}|FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj|solutionrelative:fatecsismed.identityserver\\seeddatabase\\entities\\databaseidentityserverinitializer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -31,53 +31,52 @@
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "launchSettings.json",
-              "DocumentMoniker": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\Properties\\launchSettings.json",
-              "RelativeDocumentMoniker": "FatecSisMed.ProductAPI\\Properties\\launchSettings.json",
-              "ToolTip": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\Properties\\launchSettings.json",
-              "RelativeToolTip": "FatecSisMed.ProductAPI\\Properties\\launchSettings.json",
-              "ViewState": "AQIAAAYAAAAAAAAAAAAAABcAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-13T22:49:12.846Z",
+              "Title": "IdentityConfiguration.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\Configuration\\IdentityConfiguration.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.IdentityServer\\Configuration\\IdentityConfiguration.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\Configuration\\IdentityConfiguration.cs",
+              "RelativeToolTip": "FatecSisMed.IdentityServer\\Configuration\\IdentityConfiguration.cs",
+              "ViewState": "AQIAAB0AAAAAAAAAAAAwwCoAAAANAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T00:32:45.923Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FatecSisMed.MedicoAPI",
-              "DocumentMoniker": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
-              "RelativeDocumentMoniker": "FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
-              "ToolTip": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
-              "RelativeToolTip": "FatecSisMed.ProductAPI\\FatecSisMed.MedicoAPI.csproj",
+              "Title": "FatecSisMed.IdentityServer.csproj",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj",
+              "RelativeDocumentMoniker": "FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj",
+              "RelativeToolTip": "FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2024-05-13T22:49:08.801Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\appsettings.json",
-              "RelativeDocumentMoniker": "FatecSisMed.Web\\appsettings.json",
-              "ToolTip": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.Web\\appsettings.json",
-              "RelativeToolTip": "FatecSisMed.Web\\appsettings.json",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAkAAAApAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2024-05-13T22:48:40.107Z",
+              "WhenOpened": "2024-05-16T00:32:01.96Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "20240513224631_initial-migration.cs",
-              "DocumentMoniker": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\Migrations\\20240513224631_initial-migration.cs",
-              "RelativeDocumentMoniker": "FatecSisMed.ProductAPI\\Migrations\\20240513224631_initial-migration.cs",
-              "ToolTip": "C:\\Users\\Mateus\\Desktop\\FatecSisMed\\FatecSisMed\\FatecSisMed.ProductAPI\\Migrations\\20240513224631_initial-migration.cs",
-              "RelativeToolTip": "FatecSisMed.ProductAPI\\Migrations\\20240513224631_initial-migration.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Title": "DataBaseIdentityServerInitializer.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\SeedDataBase\\Entities\\DataBaseIdentityServerInitializer.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.IdentityServer\\SeedDataBase\\Entities\\DataBaseIdentityServerInitializer.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\SeedDataBase\\Entities\\DataBaseIdentityServerInitializer.cs",
+              "RelativeToolTip": "FatecSisMed.IdentityServer\\SeedDataBase\\Entities\\DataBaseIdentityServerInitializer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAA7AAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-13T22:46:32.134Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-16T00:27:31.199Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IDataBaseInitializer.cs",
+              "DocumentMoniker": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\SeedDataBase\\Interfaces\\IDataBaseInitializer.cs",
+              "RelativeDocumentMoniker": "FatecSisMed.IdentityServer\\SeedDataBase\\Interfaces\\IDataBaseInitializer.cs",
+              "ToolTip": "D:\\FATEC\\5\u00BA Semestre\\topicos-espec-2\\FatecSisMed\\FatecSisMed\\FatecSisMed.IdentityServer\\SeedDataBase\\Interfaces\\IDataBaseInitializer.cs",
+              "RelativeToolTip": "FatecSisMed.IdentityServer\\SeedDataBase\\Interfaces\\IDataBaseInitializer.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAIAAAAIAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-16T00:26:53.623Z"
             }
           ]
         }
