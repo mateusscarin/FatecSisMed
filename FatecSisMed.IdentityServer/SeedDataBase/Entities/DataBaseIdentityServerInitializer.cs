@@ -67,6 +67,35 @@ public class DataBaseIdentityServerInitializer : IDataBaseInitializer
                 }).Result;
             }
         }
+        if (_userManager.FindByEmailAsync("client@gmail.com").Result is null)
+        {
+            ApplicationUser client = new ApplicationUser()
+            {
+                UserName = "scarinclient",
+                NormalizedUserName = "SCARINCLIENT",
+                Email = "client@gmail.com",
+                NormalizedEmail = "CLIENT@GMAIL.COM",
+                EmailConfirmed = true,
+                LockoutEnabled = false,
+                PhoneNumber = "+55 (11) 99012-3456",
+                FirtName = "Usuario",
+                LastName = "Client",
+                SecurityStamp = Guid.NewGuid().ToString()
+
+            };
+            IdentityResult resultClient = _userManager.CreateAsync(client, "Client@1234").Result;
+            if (resultClient.Succeeded)
+            {
+                _userManager.AddToRoleAsync(client, IdentityConfiguration.Client).Wait();
+                var clientClaims = _userManager.AddClaimsAsync(client, new Claim[]
+                {
+                    new Claim(JwtClaimTypes.Name, $"{client.FirtName} {client.LastName}"),
+                    new Claim(JwtClaimTypes.GivenName, client.FirtName),
+                    new Claim(JwtClaimTypes.FamilyName, client.LastName),
+                    new Claim(JwtClaimTypes.Role, IdentityConfiguration.Client)
+                }).Result;
+            }
+        }
     }
 
 }
