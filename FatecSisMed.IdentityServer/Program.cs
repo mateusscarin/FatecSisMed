@@ -1,6 +1,10 @@
+using Duende.IdentityServer.Services;
 using FatecSisMed.IdentityServer.Configuration;
 using FatecSisMed.IdentityServer.Data.Context;
 using FatecSisMed.IdentityServer.Data.Entities;
+using FatecSisMed.IdentityServer.SeedDataBase.Entities;
+using FatecSisMed.IdentityServer.SeedDataBase.Interfaces;
+using FatecSisMed.IdentityServer.Services.Entities;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 
@@ -29,8 +33,14 @@ var builderIdentityServer = builder.Services.AddIdentityServer(options =>
 }).AddInMemoryIdentityResources(
     IdentityConfiguration.IdentityResources)
     .AddInMemoryApiScopes(IdentityConfiguration.ApiScopes)
+    .AddInMemoryClients(IdentityConfiguration.Clients)
     .AddAspNetIdentity<ApplicationUser>();
 
+builderIdentityServer.AddDeveloperSigningCredential();
+
+builder.Services.AddScoped<IDataBaseInitializer, DataBaseIdentityServerInitializer>();
+
+builder.Services.AddScoped<IProfileService, ProfileAppService>();
 
 var app = builder.Build();
 
@@ -47,10 +57,26 @@ app.UseStaticFiles();
 
 app.UseRouting();
 
+app.UseIdentityServer();
+
 app.UseAuthorization();
+
+SeedDatabaseIdentityServer(app);
 
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
 
 app.Run();
+
+void SeedDatabaseIdentityServer(IApplicationBuilder app)
+{
+    using (var serviceScope = app.ApplicationServices.CreateScope())
+    {
+        var initRoleUsers = serviceScope.ServiceProvider.GetService<IDataBaseInitializer>();
+
+        initRoleUsers.InitializeSeedRoles();
+        initRoleUsers.InitializeSeedUsers();
+    }
+}
+

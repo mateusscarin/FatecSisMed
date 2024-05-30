@@ -23,7 +23,7 @@ public class IdentityConfiguration
         new ApiScope(name: "delete", "Delete data.")
     };
 
-    public static IEnumerable<Client> Clientes => new List<Client>
+    public static IEnumerable<Client> Clients => new List<Client>
     {
         new Client
         {
