@@ -5,23 +5,25 @@ namespace FatecSisMed.MedicoAPI.Context.Entities;
 
 public class AppDbContext : DbContext
 {
-	public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
-	{
-	}
+    public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
+    {
+    }
 
-	// fazemos o mapeamento do objeto relacional
-	// do nosso BD
+    // fazemos o mapeamento do objeto relacional
+    // do nosso BD
 
-	public DbSet<Convenio> Convenios { get; set; }
+    public DbSet<Convenio> Convenios { get; set; }
     public DbSet<Especialidade> Especialidades { get; set; }
     public DbSet<Medico> Medicos { get; set; }
+    public DbSet<Marca> Marcas { get; set; }
+    public DbSet<Remedio> Remedios { get; set; }
 
     // usamos a fluent API e nao os Data Annotations
     protected override void OnModelCreating(ModelBuilder modelBuilder)
     {
         modelBuilder.Entity<Convenio>().HasKey(c => c.Id);
         modelBuilder.Entity<Convenio>().Property(c => c.Nome).HasMaxLength(100).IsRequired();
-        
+
         modelBuilder.Entity<Especialidade>().HasKey(e => e.Id);
         modelBuilder.Entity<Especialidade>().Property(e => e.Nome).HasMaxLength(100).IsRequired();
 
@@ -91,6 +93,36 @@ public class AppDbContext : DbContext
                ConvenioId = 2,
                EspecialidadeId = 2
            });
+
+        modelBuilder.Entity<Marca>().HasData(
+            new Marca
+            {
+                Id = 1,
+                Nome = "CIMED",
+                Observacao = "Marca CIMED a mais vendida!"
+            },
+            new Marca
+            {
+                Id = 2,
+                Nome = "GeLab",
+                Observacao = "Marca GeLab, muito vendida nas farmácias!"
+            });
+
+        modelBuilder.Entity<Remedio>().HasData(
+            new Remedio
+            {
+                Id = 1,
+                Nome = "Dipirona",
+                Preco = 20.4,
+                MarcaId = 1,
+            },
+            new Remedio
+            {
+                Id = 2,
+                Nome = "Tilenol",
+                Preco = 21.5,
+                MarcaId = 2,
+            });
 
     }
 }
