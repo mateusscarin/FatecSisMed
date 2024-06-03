@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FatecSisMed.Web")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a9be0b4ff067f7dca45d1882525ea81ae4d45a86")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+47b685573061751c2ae0b1954b0ffb461919436b")]
 [assembly: System.Reflection.AssemblyProductAttribute("FatecSisMed.Web")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FatecSisMed.Web")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

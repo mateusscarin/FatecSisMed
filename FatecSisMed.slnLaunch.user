@@ -9,6 +9,11 @@
       },
       {
         "Name": "FatecSisMed.MedicoAPI\\FatecSisMed.MedicoAPI.csproj",
+        "Action": "Start",
+        "DebugTarget": ""
+      },
+      {
+        "Name": "FatecSisMed.IdentityServer\\FatecSisMed.IdentityServer.csproj",
         "Action": "Start"
       }
     ]
