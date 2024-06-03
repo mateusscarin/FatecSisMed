@@ -33,6 +33,14 @@ public class AppDbContext : DbContext
         modelBuilder.Entity<Medico>().Property(m => m.Telefone).HasMaxLength(20);
         modelBuilder.Entity<Medico>().Property(m => m.Endereco).HasMaxLength(100);
 
+        modelBuilder.Entity<Marca>().HasKey(m => m.Id);
+        modelBuilder.Entity<Marca>().Property(m => m.Nome);
+        modelBuilder.Entity<Marca>().Property(m => m.Observacao).HasMaxLength(200);
+
+        modelBuilder.Entity<Remedio>().HasKey(c => c.Id);
+        modelBuilder.Entity<Remedio>().Property(c => c.Nome);
+        modelBuilder.Entity<Remedio>().Property(c => c.Preco);
+
         // relacionamento
         modelBuilder.Entity<Convenio>()
             .HasMany(c => c.Medicos).WithOne(m => m.Convenio)
@@ -40,6 +48,10 @@ public class AppDbContext : DbContext
 
         modelBuilder.Entity<Especialidade>()
             .HasMany(e => e.Medicos).WithOne(m => m.Especialidade)
+            .IsRequired().OnDelete(DeleteBehavior.Cascade);
+
+        modelBuilder.Entity<Marca>()
+            .HasMany(m => m.Remedios).WithOne(m => m.Marca)
             .IsRequired().OnDelete(DeleteBehavior.Cascade);
 
         // Populando o BD com os primeiros
